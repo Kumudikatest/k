@@ -9,9 +9,21 @@
     "lambdaCodeKeyParameter": {
       "Type": "String",
       "Description": "S3 key of the Lambda deployment package"
+    },
+    "envVarGCPSERVICEACCOUNTKEYParameter": {
+      "Type": "String",
+      "Description": "Value of the environment variable: GCP_SERVICE_ACCOUNT_KEY, for all Lambdas"
+    },
+    "envVarGCPPROJECTParameter": {
+      "Type": "String",
+      "Description": "Value of the environment variable: GCP_PROJECT, for all Lambdas"
     }
   },
   "Outputs": {
+    "cognitoHotSpacesVendorAppDev": {
+      "Description": "ID of Cognito user pool HotSpaces Vendor App Dev",
+      "Value": "us-east-1_mcdTV1jKi"
+    },
     "k": {
       "Description": "ARN of Lambda function k",
       "Value": {
@@ -52,6 +64,12 @@
         },
         "Environment": {
           "Variables": {
+            "GCP_SERVICE_ACCOUNT_KEY": {
+              "Ref": "envVarGCPSERVICEACCOUNTKEYParameter"
+            },
+            "GCP_PROJECT": {
+              "Ref": "envVarGCPPROJECTParameter"
+            },
             "SIGMA_AWS_ACC_ID": {
               "Ref": "AWS::AccountId"
             }
@@ -80,7 +98,29 @@
               }
             }
           ]
-        }
+        },
+        "Policies": [
+          {
+            "PolicyName": "kPolicy",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "cognito-idp:ListUsers"
+                  ],
+                  "Resource": "arn:aws:cognito-idp:us-east-1:318300609668:userpool/us-east-1_mcdTV1jKi"
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": "s3:ListBucket",
+                  "Resource": "arn:aws:s3:::qraldemo"
+                }
+              ]
+            }
+          }
+        ]
       }
     }
   }
