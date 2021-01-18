@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "k.js",
         "cursor": {
-          "lineNumber": 1,
-          "column": 1
+          "lineNumber": 22,
+          "column": 32
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -23,7 +23,7 @@
           "name": "k"
         },
         "triggers": [],
-        "lastUpdated": 1610973269556
+        "lastUpdated": 1610973473741
       },
       "4a4a88a4-b101-42cc-aebb-32756163f7d6": {
         "id": "4a4a88a4-b101-42cc-aebb-32756163f7d6",
@@ -344,6 +344,11 @@
             "name": "sample_gcs"
           }
         }
+      },
+      "datastore": {
+        "name": "datastore",
+        "type": "CloudDatastore",
+        "config": {}
       }
     },
     "customTemplate": {
@@ -406,7 +411,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1610973293005
+    "lastSave": 1610973490599
   },
   "VCS_STATE": {
     "provider": "GitHub",
