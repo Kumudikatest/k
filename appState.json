@@ -1,8 +1,8 @@
 {
   "EDITOR_STATE": {
     "allProjectFiles": {
-      "8b8e563d-b8ca-4143-8a9e-402652dde851": {
-        "id": "8b8e563d-b8ca-4143-8a9e-402652dde851",
+      "cc65b8c5-a43c-4134-96f8-b6db2cda4140": {
+        "id": "cc65b8c5-a43c-4134-96f8-b6db2cda4140",
         "parent": null,
         "name": "k.js",
         "type": "JS_LAMBDA",
@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "k.js",
         "cursor": {
-          "lineNumber": 22,
-          "column": 32
+          "lineNumber": 12,
+          "column": 20
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -23,10 +23,10 @@
           "name": "k"
         },
         "triggers": [],
-        "lastUpdated": 1610973473741
+        "lastUpdated": 1611235152972
       },
-      "4a4a88a4-b101-42cc-aebb-32756163f7d6": {
-        "id": "4a4a88a4-b101-42cc-aebb-32756163f7d6",
+      "669b5330-5264-4cb7-823a-1586cecee3c5": {
+        "id": "669b5330-5264-4cb7-823a-1586cecee3c5",
         "parent": null,
         "name": "package.json",
         "type": "JSON_FILE",
@@ -34,80 +34,51 @@
         "children": [],
         "isRemovable": true,
         "filePath": "package.json"
-      },
-      "1aa3c0fc-6fe4-4d12-a3cb-fbf9b6eebbdf": {
-        "id": "1aa3c0fc-6fe4-4d12-a3cb-fbf9b6eebbdf",
-        "parent": null,
-        "name": "Authorizer.js",
-        "type": "JS_FILE",
-        "isDirectory": false,
-        "children": [],
-        "isRemovable": true,
-        "filePath": "Authorizer.js"
       }
     },
     "openFiles": [
-      "8b8e563d-b8ca-4143-8a9e-402652dde851"
+      "cc65b8c5-a43c-4134-96f8-b6db2cda4140"
     ],
-    "currentFileId": "8b8e563d-b8ca-4143-8a9e-402652dde851",
+    "currentFileId": "cc65b8c5-a43c-4134-96f8-b6db2cda4140",
     "resources": {
-      "cognitoHotSpacesVendorAppDev": {
-        "name": "cognitoHotSpacesVendorAppDev",
+      "cognitoTestCognito": {
+        "name": "cognitoTestCognito",
         "type": "CognitoIdentityServiceProvider",
         "config": {
           "mode": 1,
-          "name": "HotSpaces Vendor App Dev",
-          "arn": "arn:aws:cognito-idp:us-east-1:318300609668:userpool/us-east-1_mcdTV1jKi",
+          "name": "Test Cognito",
+          "arn": "arn:aws:cognito-idp:us-east-1:318300609668:userpool/us-east-1_HdYJb7Znp",
           "userPool": {
-            "Id": "us-east-1_mcdTV1jKi",
-            "Name": "HotSpaces Vendor App Dev",
-            "LambdaConfig": {},
+            "Id": "us-east-1_HdYJb7Znp",
+            "Name": "Test Cognito",
+            "LambdaConfig": {
+              "CustomMessage": "arn:aws:lambda:us-east-1:318300609668:function:testyyyinduuuu"
+            },
             "Policies": {
               "PasswordPolicy": {
                 "MinimumLength": 8,
-                "RequireUppercase": false,
-                "RequireLowercase": false,
-                "RequireNumbers": false,
-                "RequireSymbols": false,
-                "TemporaryPasswordValidityDays": 30
+                "RequireUppercase": true,
+                "RequireLowercase": true,
+                "RequireNumbers": true,
+                "RequireSymbols": true,
+                "TemporaryPasswordValidityDays": 7
               }
             },
-            "AutoVerifiedAttributes": [
-              "email"
-            ],
-            "UsernameAttributes": [
-              "email",
-              "phone_number"
-            ],
-            "SmsVerificationMessage": "Your verification code is {####}. ",
-            "EmailVerificationMessage": "Your verification code is {####}. ",
-            "EmailVerificationSubject": "Your verification code",
             "VerificationMessageTemplate": {
-              "SmsMessage": "Your verification code is {####}. ",
-              "EmailMessage": "Your verification code is {####}. ",
-              "EmailSubject": "Your verification code",
-              "EmailMessageByLink": "Please click the link below to verify your email address. {##Verify Email##} ",
-              "EmailSubjectByLink": "[HotSpaces] Your verification link",
-              "DefaultEmailOption": "CONFIRM_WITH_LINK"
+              "DefaultEmailOption": "CONFIRM_WITH_CODE"
             },
-            "SmsAuthenticationMessage": "Your authentication code is {####}. ",
-            "MfaConfiguration": "OPTIONAL",
+            "MfaConfiguration": "OFF",
             "EmailConfiguration": {
               "EmailSendingAccount": "COGNITO_DEFAULT"
             },
             "SmsConfiguration": {
-              "SnsCallerArn": "arn:aws:iam::318300609668:role/service-role/HotSpacesVendorAppDev-SMS-Role",
-              "ExternalId": "76e0044a-336d-4127-8d16-8f48e087a9e0"
+              "SnsCallerArn": "arn:aws:iam::318300609668:role/service-role/TestCognito-SMS-Role",
+              "ExternalId": "a5aa9c3d-325f-4d4c-bd3e-06f1485e8375"
             },
             "UserPoolTags": {},
             "AdminCreateUserConfig": {
-              "AllowAdminCreateUserOnly": true,
-              "UnusedAccountValidityDays": 30,
-              "InviteMessageTemplate": {
-                "SMSMessage": "Your username for HotSpaces vendor app is {username} and temporary password is {####}. ",
-                "EmailMessage": "Your username for HotSpaces vendor app is {username} and temporary password is {####}. ",
-                "EmailSubject": "[HotSpaces] Your temporary password"
-              }
+              "AllowAdminCreateUserOnly": false,
+              "UnusedAccountValidityDays": 7
             },
             "SchemaAttributes": [
               {
@@ -126,7 +97,7 @@
                 "AttributeDataType": "String",
                 "DeveloperOnlyAttribute": false,
                 "Mutable": true,
-                "Required": true,
+                "Required": false,
                 "StringAttributeConstraints": {
                   "MinLength": "0",
                   "MaxLength": "2048"
@@ -225,7 +196,7 @@
                 "AttributeDataType": "String",
                 "DeveloperOnlyAttribute": false,
                 "Mutable": true,
-                "Required": true,
+                "Required": false,
                 "StringAttributeConstraints": {
                   "MinLength": "0",
                   "MaxLength": "2048"
@@ -287,7 +258,7 @@
                 "AttributeDataType": "String",
                 "DeveloperOnlyAttribute": false,
                 "Mutable": true,
-                "Required": true,
+                "Required": false,
                 "StringAttributeConstraints": {
                   "MinLength": "0",
                   "MaxLength": "2048"
@@ -324,31 +295,6 @@
             ]
           }
         }
-      },
-      "s3qraldemo": {
-        "name": "s3qraldemo",
-        "type": "S3",
-        "config": {
-          "mode": 1,
-          "bucket": {
-            "name": "qraldemo"
-          }
-        }
-      },
-      "storagesamplegcs": {
-        "name": "storagesamplegcs",
-        "type": "CloudStorage",
-        "config": {
-          "mode": 1,
-          "bucket": {
-            "name": "sample_gcs"
-          }
-        }
-      },
-      "datastore": {
-        "name": "datastore",
-        "type": "CloudDatastore",
-        "config": {}
       }
     },
     "customTemplate": {
@@ -365,22 +311,6 @@
         "shouldPersist": false,
         "displayOnly": false,
         "editable": false
-      },
-      {
-        "lambdaId": "all",
-        "varKey": "GCP_SERVICE_ACCOUNT_KEY",
-        "varValue": null,
-        "shouldPersist": false,
-        "displayOnly": false,
-        "editable": false
-      },
-      {
-        "lambdaId": "all",
-        "varKey": "GCP_PROJECT",
-        "varValue": null,
-        "shouldPersist": false,
-        "displayOnly": false,
-        "editable": false
       }
     ],
     "packageJSON": {
@@ -390,13 +320,6 @@
           "language": "nodejs",
           "version": "2.817.0",
           "dev": true,
-          "notRemovable": false
-        },
-        "googleapis": {
-          "name": "googleapis",
-          "language": "nodejs",
-          "version": "29.0.0",
-          "dev": false,
           "notRemovable": false
         }
       }
@@ -411,7 +334,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1610973490599
+    "lastSave": 1611235284507
   },
   "VCS_STATE": {
     "provider": "GitHub",

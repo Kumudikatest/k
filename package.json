@@ -1,8 +1,5 @@
 {
     "devDependencies": {
         "aws-sdk": "2.817.0"
-    },
-    "dependencies": {
-        "googleapis": "29.0.0"
     }
 }
